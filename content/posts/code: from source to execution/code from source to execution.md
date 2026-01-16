@@ -1,28 +1,26 @@
 # code: from source to execution
 
 do you know how your code
-
-**int f(){**
-
-**return 42;**
-
-**}**
+~~~c++
+int f(){
+    return 42;
+}
+~~~
 
 turns into
-
-**mov eax, 42
-ret**
-
+~~~llvm ir 
+mov eax, 42
+ret
+~~~
 and then into
 
-**B8 2A 00 00 00 C3** 
+`B8 2A 00 00 00 C3` 
 
 this?
 
 <aside>
-💡
 
-Here’s the short thing:
+Here’s the whole essay in short:
 
 **source code** → something happens, **Intermediate code** forms → something happens again, **Machine code** is formed.
 
@@ -38,21 +36,22 @@ Compiled languages are programming languages that are converted into machine cod
 
 Interpreted languages are not converted into compiled code, rather the source code is directly executed line-by-line by the interpretor.
 
+***
 CAVEAT: most of the lanugages today use a mixture of the two ideas. Ex. Initially, the **JVM interprets the Java bytecode** produced by the Java compiler, executing it instruction by instruction until it identifies frequently executed (“hot”) code paths, which are then compiled into native machine code by the JIT compiler for faster execution.
-
+***
 # Different representations of the code
 
 ## Source code
 
->> This is the code that the programmer sees. It’s in programming languages. 
+> This is the code that the programmer sees. It’s in programming languages. 
 
-Ex: .py files for Python code and .c files for C code.
+> Ex: .py files for Python code and .c files for C code.
 
->> it’s human-readable.
+> it’s human-readable.
 
->> code has semantics (meaning) and a form. 
+> code has semantics (meaning) and a form. 
 
->> features like comments, indentation and format.
+> features like comments, indentation and format.
 
 ```cpp
 int add(int a, int b){
@@ -69,15 +68,15 @@ int add(int a, int b){
 
 ## IR: Intermediate Representation
 
->> It is the intermediate code that is formed.
+>It is the intermediate code that is formed.
 
->> it is a little bit more lower-level. Hence it forms a key phase in compiler’s front-end.
+>it is a little bit more lower-level. Hence it forms a key phase in compiler’s front-end.
 
->> It is platform independent. Which enhances portability. 
+>It is platform independent. Which enhances portability. 
 
->> For n languages and m targets, you need n front-ends + m back-ends instead of n*m full compilers.
+>For n languages and m targets, you need n front-ends + m back-ends instead of n*m full compilers.
 
->> Intermediate code has several levels before the code turns into machine code:
+>Intermediate code has several levels before the code turns into machine code:
 
 - high-level - ex: Syntax Tree
     - close to source code, can be used to trace back to the source code
@@ -85,7 +84,7 @@ int add(int a, int b){
     - example:
         
         ![Abstract Syntax Tree (AST) - type of a mid-level IR 
-        credits: GeeksForGeeks](code%20from%20source%20to%20execution/gfg-IR-w1.png)
+        credits: GeeksForGeeks](ast.png)
         
         Abstract Syntax Tree (AST) - type of a mid-level IR 
         credits: GeeksForGeeks
@@ -159,7 +158,7 @@ Let’s see now how that IR is translated into machine code.
 
 But before that,
 
-- Little case study on JVM bytecode and LLVM IR (open toggle)
+- Little case study on JVM bytecode and LLVM IR 
     
     we will see how this function below
     
@@ -171,8 +170,10 @@ But before that,
     
     turns into IR of Java and C++ (via Clang)
     
-    ![image.png](code%20from%20source%20to%20execution/image.png)
+    ![image.png](image.png)
     
+
+
 
 a lot of things happen when we move to the final step from IR to machine code!
 
@@ -212,20 +213,20 @@ a lot of things happen when we move to the final step from IR to machine code!
     - schedule instructions. meaning the instructions used majorly are called first
     - small tweaks like **add i32 %a, 1** → **inc i32 %a**
 6. Code Emission & Linking
-****Output assembly or object file is formed (e.g., .o file), then link to executable.
+Output assembly or object file is formed (e.g., .o file), then link to executable.
     - Assemble: Text asm → binary (opcodes + operands).
     - Link: Resolve externals, add runtime (e.g., libc).
     Example: Final x86 machine code for simple **add**: **55 48 89 E5 89 7D FC 89 75 F8 8B 55 FC 8B 45 F8 01 D0 5D C3** (prologue + add + epilogue).
 
 ## Machine Code
 
->> it is the lowest level representation of code.
+>it is the lowest level representation of code.
 
->> it is **architecture dependent**. Put simply, to make a compiler, you’d need to know the type of CPU the code will be executed on.
+>it is **architecture dependent**. Put simply, to make a compiler, you’d need to know the type of CPU the code will be executed on.
 
->> everything in machine code is “out there”. Meaning, the registers information, jumps, memory addresses etc. No abstractions.
+>everything in machine code is “out there”. Meaning, the registers information, jumps, memory addresses etc. No abstractions.
 
->> it has 
+>it has 
 
 - opcode - ex: add, jump
 - registers - ex: EAX on x86 architecture
@@ -238,7 +239,7 @@ And there we have it.
 
 here’s something for a review.
 
-![Picture source: geeksforgeeks.org](code%20from%20source%20to%20execution/gfg-compiler-phases.png)
+![Picture source: geeksforgeeks.org](gfg-compiler-phases.png)
 
 Picture source: geeksforgeeks.org
 
@@ -248,14 +249,14 @@ From language specific details, check out the https://medium.com/javarevisited/c
 
 # References
 
-https://www.geeksforgeeks.org/compiler-design/intermediate-code-generation-in-compiler-design/ - GFG on Intermediate Code Generation
+[GFG on Intermediate Code Generation](https://www.geeksforgeeks.org/compiler-design/intermediate-code-generation-in-compiler-design/)
 
-https://www.geeksforgeeks.org/compiler-design/three-address-code-compiler/ - GFG on TAC
+[GFG on TAC](https://www.geeksforgeeks.org/compiler-design/three-address-code-compiler/)
 
-https://medium.com/javarevisited/code-compilation-from-source-to-machine-code-1375e49d00b6 - Brilliant essay on how Java, C++ and Python compile code
+[Brilliant essay on how Java, C++ and Python compile code](https://medium.com/javarevisited/code-compilation-from-source-to-machine-code-1375e49d00b6 )
 
-https://net-informations.com/python/iq/linking.htm - article on how python code is compiled
+[article on how python code is compiled](https://net-informations.com/python/iq/linking.htm)
 
-https://en.wikipedia.org/wiki/Abstract_syntax_tree - wiki on ASTs
+[wiki on ASTs](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
 
 LLMs: grok.com, chatgpt.com
