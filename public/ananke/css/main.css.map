@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/imaayush/code/hugo/my-site",
+	"sourceRoot": "/home/imaayush/code/hugo/hugo_blog",
 	"sources": [
 		"ananke/css/main.css"
 	],

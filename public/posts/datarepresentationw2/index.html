@@ -54,7 +54,7 @@ Why should you care? As we will understand later in the article, there are issue
   <meta itemprop="name" content="AAYUSHYA TIWARI">
   <meta itemprop="description" content="Data Representation in computers Overview When you call int x = 0; in your code, where and how is that x stored? This is the question that I wanted to know the answer of. And in this essay, we’ll look at just that. And
 Why should you care? As we will understand later in the article, there are issues and subtle bugs that come when programmers don’t understand their code. Hackers want to figure out ways to exploit those bugs and gain entery into people’s systems. So knowing how, why, and where of your data, in your system is not only useful, I’d say it’s necessary.">
-  <meta itemprop="wordCount" content="1314">
+  <meta itemprop="wordCount" content="1317">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="AAYUSHYA TIWARI">
   <meta name="twitter:description" content="Data Representation in computers Overview When you call int x = 0; in your code, where and how is that x stored? This is the question that I wanted to know the answer of. And in this essay, we’ll look at just that. And
@@ -199,12 +199,13 @@ Main segments are:</p>
 <li><strong>Heap</strong>: dynamic lifetime, modifiable.</li>
 </ol>
 <p><img src="image%201.png" alt="image.png"></p>
-<!-- raw HTML omitted -->
+<aside>
+💡
 <blockquote>
 <p>Memory issues<br>
 Most memory issues in programming are because of a rule called <em><strong>“live object rule”</strong></em>. Basically, you can only access an object that’s in its lifetime right now.</p>
 </blockquote>
-<!-- raw HTML omitted -->
+</aside>
 <h1 id="types-of-data-representation">types of data representation</h1>
 <p>Fundamental types of data as described in the book are as follows:</p>
 <h2 id="unsigned-int">unsigned int</h2>
@@ -212,11 +213,12 @@ Most memory issues in programming are because of a rule called <em><strong>“li
 <p>The good question is, how do you <strong>store</strong> <em>multi-byte</em> variables in memory.</p>
 <p>Question: since one byte’s max number is 255, how do you store 258?<br>
 And it’s the job of compiler to decide exactly that.</p>
-<!-- raw HTML omitted -->
+<aside>
+💡
 <p>There are two order notations that we have to know about before we learn about <strong>multi-byte storage</strong>:</p>
 <p>a. <strong>big endian order</strong>: the most significant component byte is stored first till the least. It is also called ‘network’ byte order because all the network protocols use this order.<br>
 b. <strong>little endian order:</strong> least significant component byte to most significant component byte. Used mostly in allocating memory.</p>
-<!-- raw HTML omitted -->
+</aside>
 <p><img src="image%202.png" alt="image.png"></p>
 <ul>
 <li>
@@ -237,14 +239,15 @@ b. <strong>little endian order:</strong> least significant component byte to mos
 </ul>
 </li>
 </ul>
-<!-- raw HTML omitted -->
+<aside>
+💡
 <blockquote>
 <p><em><strong>WORD</strong></em>
 In computers, the basic unit of compiler design storage is a Word.
 A Word can hold value from 0 to 2^w - 1.
 where w is the maximum length of the virtual address the processor can store. In modern computers, most computers are now storing 64 bits.</p>
 </blockquote>
-<!-- raw HTML omitted -->
+</aside>
 <h2 id="signed-int">signed int</h2>
 <p>computers use - <strong>two’s complement</strong> to represent signed integer.</p>
 <p>Question to think: how do you store -132 in binary?</p>

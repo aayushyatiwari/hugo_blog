@@ -9,6 +9,7 @@ I am interested in machine learning, cs, math, science, philosophy, reading (som
 **I hope to learn, and use whatever I have to make this a better world.**
 
 Thanks for being here.    
+<img src="/images/profile.jpeg" alt="A picture of me" width="300">
 
 Contacts:
 
