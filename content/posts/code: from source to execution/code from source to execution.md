@@ -1,5 +1,7 @@
-# code: from source to execution
-
+---
+   title: "code: from source to execution"
+   date: 2026-01-03
+---
 do you know how your code
 ~~~c++
 int f(){

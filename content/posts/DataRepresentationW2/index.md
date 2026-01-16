@@ -1,4 +1,7 @@
-# Data Representation in computers
+---
+   title: "Data Representation in computers"
+   date: 2026-01-15
+---
 
 # Overview
 

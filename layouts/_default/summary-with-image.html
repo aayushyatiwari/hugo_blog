@@ -1,0 +1,25 @@
+<div class="relative w-100 mb4">
+  {{ $featured_image := .Params.featured_image | compare.Default .Params.image }}
+  {{ if $featured_image }}
+    {{/* Trimmed down image logic */}}
+    <div class="mb3">
+      <a href="{{ .RelPermalink }}" class="db grow">
+        <img src="{{ $featured_image }}" class="w-100 db" alt="{{ .Title }}">
+      </a>
+    </div>
+  {{ end }}
+  
+  <h1 class="f3 fw1 athelas mt0 lh-title">
+    <a href="{{ .RelPermalink }}" class="color-inherit dim link">
+      {{ .Title }}
+    </a>
+  </h1>
+  
+  <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+    {{ .Date.Format "January 2, 2006" }}
+  </time>
+  
+  <div class="nested-links f5 lh-copy nested-copy-line-height">
+    {{ .Summary }}
+  </div>
+</div>
