@@ -6,8 +6,15 @@
     <description>Recent content on AAYUSHYA</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stacks and Heaps</title>
+      <link>http://localhost:1313/posts/stacks_heaps/sh/</link>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/stacks_heaps/sh/</guid>
+      <description>&lt;h1 id=&#34;data-management-during-compiler-process&#34;&gt;Data management during compiler process&lt;/h1&gt;&#xA;&lt;p&gt;When compiling a piece of code, the data in the code is stored in &lt;em&gt;segments&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Data Representation in computers</title>
       <link>http://localhost:1313/posts/datarepresentationw2/</link>
