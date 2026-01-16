@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "AAYUSHYA"
 theme = "ananke"
 
+summaryLength = 20  # Add this line (default is 70 words)
+
 [menu]
 
 [[menu.main]]
@@ -14,10 +16,15 @@ weight = 1
 name = "Writings"
 url = "/posts/"
 weight = 2
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
+[params]
+mainSections = ["posts"]
+recent_posts_number = 5
+
 [params.ananke]
-show_recent_posts = false
+show_recent_posts = true
