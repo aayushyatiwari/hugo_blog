@@ -1,0 +1,20 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'AAYUSHYA TIWARI'
+theme = 'ananke'
+[menu]
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 1
+[[menu.main]]
+name = "Writings"
+url = "/posts/"
+weight = 2
+[params]
+defaultTheme = "auto"
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
