@@ -136,9 +136,11 @@ Today we&rsquo;re looking at hashing. We&rsquo;ll get into the process, the data
 </ol>
 <h1 id="what-is-hashing">what is Hashing?</h1>
 <p>Hashing is a <strong>technique</strong> of identifying an object out of a group of similar objects.</p>
-<p><strong>Analogy for hashing</strong>:
-Imagine if you took your name &ldquo;tiwariji&rdquo; and ran it through a complex mathematical function that produced &ldquo;7a3f9c2e&rdquo;. You couldn&rsquo;t look at &ldquo;7a3f9c2e&rdquo; and figure out it came from &ldquo;tiwariji&rdquo;, but every time you hash &ldquo;tiwariji&rdquo; you&rsquo;d get the same result.  <br>
+<p><strong>Analogy for hashing</strong>: <br>
+Imagine if you took your name <em>tiwariji</em> and ran it through a complex mathematical function that produced <strong>7a3f9c2e</strong>. You couldn&rsquo;t look at <strong>7a3f9c2e</strong> and figure out it came from <em>tiwariji</em>, but every time you hash <em>tiwariji</em> you&rsquo;d get the same result.  <br>
+<br>
 That, is hashing.  <br>
+<br>
 Ideally, no two different inputs should produce the same hash output. We&rsquo;ll talk about that later when we discuss <a href="#hash-functions">hash functions</a>.</p>
 <p>There are different ways you can create your hashing function. <br>
 This also means there are different ways to hash. <br>
@@ -186,16 +188,16 @@ Ex: b - 1, c- 3...
 </span></span><span style="display:flex;"><span>        ind <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>hash(key) 
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>hashTable[ind]
 </span></span></code></pre></div><p>Question. If you have arbitrarily big numbers, how do you create such a big table?</p>
-<h2 id="hash-tables">hash tables</h2>
+<h2 id="hash-tables">Hash Tables</h2>
 <p>Hash tables fix this issue. They work because each slot in the table now holds h(k) for any key k where <code>h</code> is a <a href="#hash-functions">hash function</a>.<br>
 That means you can create a <strong>good hash function</strong> and you can effectively fit large amounts of data in a smaller table.
 The hash function reduces the range of array indices and hence the size of the array needed. Instead of a size of |U|, the table can have size <code>m</code>.
 There is one issue though, they are called <a href="#collisions">collisions</a>.</p>
-<h2 id="collisions">collisions</h2>
+<h2 id="collsion">Collsion</h2>
 <p>When two different keys hash to the same output, we call that situation a <strong>collision</strong>.
 In an ideal world, there would be no collisions. But since we live in the real world, we&rsquo;ll see ways to handle this problem.    <br>
 One of the best ways to do that, is by a process called <a href="#chaining">chaining</a>.</p>
-<h3 id="chaining">chaining</h3>
+<h3 id="chaining">Chaining</h3>
 <p>In chaining, we use a data structure called linked list and store all the values that hash to the same index in a chain.<br>
 <strong>Example</strong>:</p>
 <ul>
@@ -325,20 +327,18 @@ Below is the code for making a hash function with linear probing.</li>
 <p>The idea is this:
 Use <em>randomness</em> to create <strong>unique</strong> hash functions that map keys to different slots.</p>
 <p>We do this by first choosing <strong>random</strong> numbers <code>a</code> and <code>b</code>. By generating two random numbers for creating the function, we&rsquo;re solidifying the uniqueness of the function.   <br>
-Then
-$$
-h(k) = ((ak+b) mod p)
-$$</p>
+The function is:</p>
+<p>h(k) = ((ak+b) mod p)</p>
 <p>where <code>p</code> is a prime number greater than the universe of keys, so that each key k is in the range [0, p-1].</p>
 <h2 id="applications">Applications.</h2>
-<p><strong>Associative arrays:</strong> Hash tables are commonly used to implement many types of in-memory tables. They are used to implement associative arrays (arrays whose indices are arbitrary strings or other complicated objects).
-<strong>Database indexing:</strong> Hash tables may also be used as disk-based data structures and database indices (such as in dbm).
-<strong>Caches</strong>: Hash tables can be used to implement caches i.e. auxiliary data tables that are used to speed up the access to data, which is primarily stored in slower media.
+<p><strong>Associative arrays:</strong> Hash tables are commonly used to implement many types of in-memory tables. They are used to implement associative arrays (arrays whose indices are arbitrary strings or other complicated objects). <br>
+<strong>Database indexing:</strong> Hash tables may also be used as disk-based data structures and database indices (such as in dbm). <br>
+<strong>Caches</strong>: Hash tables can be used to implement caches i.e. auxiliary data tables that are used to speed up the access to data, which is primarily stored in slower media.  <br>
 <strong>Object representation</strong>: Several dynamic languages, such as Perl, Python, JavaScript, and Ruby use hash tables to implement objects.  <br>
 <br>
 With that, we finish today&rsquo;s article.<br>
 Thanks for reading.</p>
-<h2 id="-aayushya-tiwari">~ Aayushya Tiwari</h2>
+<p>~ Aayushya Tiwari</p>
 <h2 id="references">References</h2>
 <p>: CLRS textbook of algorithms. Also called <strong>Introduction to Algorithms</strong>
 <a href="https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/#/">Hackerearth</a></p>

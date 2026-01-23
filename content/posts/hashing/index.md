@@ -14,9 +14,11 @@ Through this article, we'll see how we can implement **dictionary** operations, 
 # what is Hashing?
 Hashing is a **technique** of identifying an object out of a group of similar objects.    
 
-**Analogy for hashing**:
-Imagine if you took your name "tiwariji" and ran it through a complex mathematical function that produced "7a3f9c2e". You couldn't look at "7a3f9c2e" and figure out it came from "tiwariji", but every time you hash "tiwariji" you'd get the same result.     
+**Analogy for hashing**:    
+Imagine if you took your name *tiwariji* and ran it through a complex mathematical function that produced **7a3f9c2e**. You couldn't look at **7a3f9c2e** and figure out it came from *tiwariji*, but every time you hash *tiwariji* you'd get the same result.     
+<br>
 That, is hashing.     
+<br>
 Ideally, no two different inputs should produce the same hash output. We'll talk about that later when we discuss [hash functions](#hash-functions).     
 
 There are different ways you can create your hashing function.    
@@ -74,20 +76,20 @@ class SimpleFreqHashTable:
 
 Question. If you have arbitrarily big numbers, how do you create such a big table?
 
-## hash tables
+## Hash Tables
 
 Hash tables fix this issue. They work because each slot in the table now holds h(k) for any key k where `h` is a [hash function](#hash-functions).   
 That means you can create a **good hash function** and you can effectively fit large amounts of data in a smaller table.
 The hash function reduces the range of array indices and hence the size of the array needed. Instead of a size of |U|, the table can have size `m`.
 There is one issue though, they are called [collisions](#collisions).
 
-## collisions
+## Collsion
 
 When two different keys hash to the same output, we call that situation a **collision**.
 In an ideal world, there would be no collisions. But since we live in the real world, we'll see ways to handle this problem.       
 One of the best ways to do that, is by a process called [chaining](#chaining).
 
-### chaining 
+### Chaining 
 In chaining, we use a data structure called linked list and store all the values that hash to the same index in a chain.   
 **Example**:
 - say two keys: `k1`, `k2` hash to same value `index`.    
@@ -223,18 +225,17 @@ The idea is this:
 Use *randomness* to create **unique** hash functions that map keys to different slots.    
 
 We do this by first choosing **random** numbers `a` and `b`. By generating two random numbers for creating the function, we're solidifying the uniqueness of the function.      
-Then
-$$
+The function is:    
+
 h(k) = ((ak+b) mod p)
-$$
 
 where `p` is a prime number greater than the universe of keys, so that each key k is in the range [0, p-1]. 
 
 
 ## Applications.
-**Associative arrays:** Hash tables are commonly used to implement many types of in-memory tables. They are used to implement associative arrays (arrays whose indices are arbitrary strings or other complicated objects).
-**Database indexing:** Hash tables may also be used as disk-based data structures and database indices (such as in dbm).
-**Caches**: Hash tables can be used to implement caches i.e. auxiliary data tables that are used to speed up the access to data, which is primarily stored in slower media.
+**Associative arrays:** Hash tables are commonly used to implement many types of in-memory tables. They are used to implement associative arrays (arrays whose indices are arbitrary strings or other complicated objects).    
+**Database indexing:** Hash tables may also be used as disk-based data structures and database indices (such as in dbm).    
+**Caches**: Hash tables can be used to implement caches i.e. auxiliary data tables that are used to speed up the access to data, which is primarily stored in slower media.     
 **Object representation**: Several dynamic languages, such as Perl, Python, JavaScript, and Ruby use hash tables to implement objects.     
 <br> 
 With that, we finish today's article.   
@@ -243,7 +244,6 @@ Thanks for reading.
 
 
 ~ Aayushya Tiwari
----
 
 
 ## References
