@@ -247,7 +247,7 @@ Thanks for reading.
 
 
 ## References
-: CLRS textbook of algorithms. Also called **Introduction to Algorithms**
+: CLRS textbook of algorithms. Also called **Introduction to Algorithms**   
 [Hackerearth](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/#/)
 
 
