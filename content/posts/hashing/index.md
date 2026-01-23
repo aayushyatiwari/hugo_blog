@@ -1,8 +1,7 @@
 ---
-    title: Hashing and stuff
-    date: 2026-1-22
+   title: "Hashing and stuff"
+   date: 2026-01-22
 ---
-
 
 # what is this about?
 > Today we're looking at hashing. We'll get into the process, the data structures and some applications.    
