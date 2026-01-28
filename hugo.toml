@@ -1,30 +1,35 @@
 baseURL = "https://tiwariji.net/"
 languageCode = "en-us"
 title = "AAYUSHYA"
-theme = "ananke"
+theme = "PaperMod"
 
-summaryLength = 20  # Add this line (default is 70 words)
-
-[menu]
-
-[[menu.main]]
-name = "About"
-url = "/about/"
-weight = 1
-
-[[menu.main]]
-name = "Writings"
-url = "/posts/"
-weight = 2
+[params]
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
-[params]
-mainSections = ["posts"]
-recent_posts_number = 5
 
-[params.ananke]
-show_recent_posts = true
+# [params.homeInfoParams]
+#   Title = "AAYUSHYA"
+#   Content = "Welcome to my technical blog"
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 2
+
+# [[menu.main]]
+#   name = "Tags"
+#   url = "/tags/"
+#   weight = 3
