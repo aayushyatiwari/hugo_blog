@@ -17,12 +17,11 @@ Thinking was never easy.
 And in today's world, it's even harder.     
 Which is why I started writing. Because believe me or not, writing is thinking.     
 Every week I have this essay that I have to think about, learn, and write about.        
-It's not merely about the act of writing.       
 
-> Think deeply :)
+> Your daily reminder to: Think deeply 
 
 It's about, forcing your brain to make neural connections and engage in the **act** of thinking.        
-Honestly, I couldn't for the life of me understand [backprop](https://tiwariji.net/posts/backprop/). But trying to write the essay and implementing different neural nets without the pytorch's `loss.backward()` helped me understand it better.      
+Honestly, I couldn't, for the life of me, understand [backprop](https://tiwariji.net/posts/backprop/). But trying to write the essay and implementing different neural nets without the pytorch's `loss.backward()` helped me understand it better.      
 That, is exactly why I started writing. 
 
 # So, what's the update?
@@ -32,7 +31,7 @@ I have been writing more code than ever, I mean, debugging more than ever. :P
 Currently building an autograd engine and modifying the already written micrograd in cpp.       
 Also, reading some research papers.     
 Trying to learn about the intersection of AI and low-level stuff.       
-
+Expect some nice essays coming soon!
 
 
 
