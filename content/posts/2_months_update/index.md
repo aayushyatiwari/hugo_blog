@@ -1,8 +1,7 @@
 ---
-title: "update on the technical essays"
+title: "Thoughts on AI; updates on essays"
 date: 2026-02-27
 ---
-# Hello, this is an update blog.        
 If you didn't know, I recently started writing more. Published a new website.        Yes, the website you're reading this at.       
 The reason was to get good at understanding and learning.       
 With the coming of AI, writing code has never been easier. And to be honest, I don't think AI has any role in this. This was way before AI came.        
@@ -10,7 +9,7 @@ The main thing that drives the world imo is an **idea**. Ideas and implementatio
 Now the way we *implement* things have been changing since ages.        
 The one example I like to think about is of the compilers and assembly programmers when C language came.        
 Pretty sure all of them were in the same position developers today are.     
-But that's another story. Implementations change, but what is the most thing that drives technology, sciences, math and all the important stuff, are, as i said, ideas.     
+But that's another story. Implementations change, but the most thing that drives technology, sciences, math and all the important stuff, are, as i said, ideas.     
 And to get better ideas, we don't just need intellect. No.      
 We need *creativity*, we need people who can understand deeply. Who can **think**.      
 And I don't use the word think in a lighter manner.     
