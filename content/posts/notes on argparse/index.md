@@ -6,7 +6,7 @@ In this article I'd like to introduce you to a rather useful python library that
 It's called `argparse` and recently I have been using it as my go to for couple of things.      
 
 I first got to know about this library when participating in a kaggle comp.         
-It was pretty intimidating at first because you're not sure what's going on but after this article I am hoping you'd know how to deal with code that deals with argparse. We'll also talk about config files and how this library can be used to write config file.      
+It was pretty intimidating at first because you're not sure what's going on but after this article I am hoping you'd know how to deal with code that mentions argparse. We'll also talk about config files and how this library can be used to write config file.      
 
 # historical context to `argparse`
 
@@ -35,7 +35,7 @@ all of the args are stored in `sys.argv` list.
 - and so on...
 
 For example: 
-I'll create a file named `helloworld.py` and it's just a template for now.
+I'll create a file named `script.py` and it's just a template for now.
 ```python
 import argparse
 
