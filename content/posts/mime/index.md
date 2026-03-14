@@ -3,7 +3,7 @@
    date: 2026-03-13
 ---
 
-Some days back I was studying for computer networks exam. I came across few protocols which were very interesting. Like SMTP (Simple Mail Transfer Protocol), telnet, SCP (Secure Copy Vulnerability) just to name a few.      
+Some days back I was studying for computer networks exam. I came across few protocols which were very interesting. Like SMTP (Simple Mail Transfer Protocol), telnet, SCP (Secure Copy Protocol) just to name a few.      
 
 # SMTP and a little bit of theory
 
