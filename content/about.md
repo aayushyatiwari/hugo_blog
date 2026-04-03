@@ -2,10 +2,11 @@
 title = 'About'
 draft = false
 +++
-Hello. I am Aayushya Tiwari. I like to write, understand and sometimes explain.    
+Hello. I am Aayushya Tiwari. I like to write, to understand and share.      
 This is a place where I document what I learn - mostly tech and science, sometimes life.   
-I am interested in machine learning, cs, math, science, philosophy, reading (sometimes), running, and music.    
-**I hope to learn, and use whatever I have to make this a better world.**
+I am interested in cs, philosophy, reading, running, and music.    
+**Universe is a complex idea. Humans should strive to improve collective conciousness to better understand it.**        
+I am here to play my part in it.        
 Thanks for being here.    
 
 <img src="/images/profile.jpeg" alt="A picture of me" width="300">
