@@ -362,4 +362,4 @@ Thanks for reading.
 
 # References
 paper: https://arxiv.org/abs/2103.13630         
-my code for this essay: https://github.com/aayushyatiwari/blogCode/quantization/
+my code for this essay: https://github.com/aayushyatiwari/blogCode/tree/master/quantization/
